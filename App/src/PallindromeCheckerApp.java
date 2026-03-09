@@ -1,25 +1,22 @@
-// PalindromeCheckerApp.java
+public class PalindromeCheckerApp {
 
-public class PallindromeCheckerApp {
-
-    // Application constants
-    static final String APP_NAME = "Palindrome Checker";
-    static final String VERSION = "Version 1.0";
-
-    // Main method - entry point of the program
     public static void main(String[] args) {
 
-        // Display welcome message
-        System.out.println("==================================");
-        System.out.println(" Welcome to " + APP_NAME);
-        System.out.println(" " + VERSION);
-        System.out.println("==================================");
+        // Hardcoded string
+        String word = "madam";
 
-        // Application startup message
-        System.out.println("This application checks whether a given string is a palindrome.");
-        System.out.println("Program initialized successfully.");
+        // Reverse the string
+        String reversed = "";
 
-        // Placeholder for next use case
-        System.out.println("Proceeding to palindrome validation...");
+        for(int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+
+        // Check palindrome using if-else
+        if(word.equals(reversed)) {
+            System.out.println(word + " is a Palindrome");
+        } else {
+            System.out.println(word + " is not a Palindrome");
+        }
     }
 }
